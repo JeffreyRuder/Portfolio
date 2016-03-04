@@ -2,14 +2,47 @@ $default-margin : 20px;
 
 @import 'ember-paper';
 
+.main-content {
+  max-width: 70%;
+}
+
+.skill-card-image {
+  height: 150px;
+  width: 150px;
+  margin: 0;
+}
+
+.selected-skills {
+  height: 100%;
+}
+
+.draggableItem[draggable=true] {
+   height: 150px;
+   width: 150px;
+   min-width: $default-margin;
+   min-height: $default-margin;
+   margin: $default-margin / 4;
+
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+
+   box-shadow: $whiteframe-shadow-z4;
+   -khtml-user-drag: element;
+   cursor: move;
+   &:hover {
+     background-color: map-get($color-blue-grey, "50");
+   }
+}
+
 .draggableDropzone {
    display: block;
    border: 3px dashed map-get($color-blue-grey, "500");
+   margin: 0 $default-margin * 2;
    padding: $default-margin / 2;
-   width: 100%;
-   min-height: $default-margin * 2.5;
+   width: 80%;
+   min-height: 150px;
    color: black;
-   margin-bottom: $default-margin / 2;
    &.activated {
      border-color: map-get($color-deep-orange, "500");
    }
