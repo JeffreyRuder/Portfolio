@@ -1,0 +1,19 @@
+<h1>What skills does your team need?</h1>
+
+<div layout="row">
+  <div class="available-skills">
+    {{#each skills as |skill|}}
+      {{#skill-drag-tile content=skill.id}}
+        {{skill.name}}
+      {{/skill-drag-tile}}
+    {{/each}}
+  </div>
+
+  <div class="selected-skills">
+    {{#skill-dropzone selectSkill="selectSkill"}}
+      {{#each selectedSkills.skills as |selected|}}
+        {{selected.name}}
+      {{/each}}
+    {{/skill-dropzone}}
+  </div>
+</div>

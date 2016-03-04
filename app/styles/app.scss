@@ -1,0 +1,19 @@
+$default-margin : 20px;
+
+@import 'ember-paper';
+
+.draggableDropzone {
+   display: block;
+   border: 3px dashed map-get($color-blue-grey, "500");
+   padding: $default-margin / 2;
+   width: 100%;
+   min-height: $default-margin * 2.5;
+   color: black;
+   margin-bottom: $default-margin / 2;
+   &.activated {
+     border-color: map-get($color-deep-orange, "500");
+   }
+   &.deactivated {
+     border-color: map-get($color-blue-grey, "500");
+   }
+}
