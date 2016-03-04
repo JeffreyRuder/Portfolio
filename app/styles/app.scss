@@ -3,7 +3,7 @@ $default-margin : 20px;
 @import 'ember-paper';
 
 .main-content {
-  max-width: 70%;
+  max-width: 85%;
 }
 
 .skill-card-image {
@@ -16,11 +16,31 @@ $default-margin : 20px;
   height: 100%;
 }
 
-.draggableItem[draggable=true] {
+.mini-skill {
+  padding: $default-margin /1.25;
+  margin: $default-margin /4;
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: $whiteframe-shadow-z1;
+  position: relative;
+
+  .mini-skill-name {
+    font-size: 1.25rem;
+    margin: $default-margin /2;
+    color: $foreground;
+  }
+}
+
+.draggableItem {
    height: 150px;
    width: 150px;
    min-width: $default-margin;
    min-height: $default-margin;
+   padding: $default-margin /2;
    margin: $default-margin / 4;
 
    display: inline-flex;
@@ -28,6 +48,9 @@ $default-margin : 20px;
    align-items: center;
 
    box-shadow: $whiteframe-shadow-z4;
+}
+
+.draggableItem[draggable=true] {
    -khtml-user-drag: element;
    cursor: move;
    &:hover {
@@ -35,14 +58,18 @@ $default-margin : 20px;
    }
 }
 
+.draggableItem[draggable=false] {
+   background-color: map-get($color-blue-grey, "50");
+}
+
 .draggableDropzone {
    display: block;
    border: 3px dashed map-get($color-blue-grey, "500");
+   background-color: map-get($color-blue-grey, "50");
    margin: 0 $default-margin * 2;
    padding: $default-margin / 2;
    width: 80%;
    min-height: 150px;
-   color: black;
    &.activated {
      border-color: map-get($color-deep-orange, "500");
    }

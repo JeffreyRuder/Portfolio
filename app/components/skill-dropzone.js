@@ -21,5 +21,11 @@ export default Ember.Component.extend({
     var data = event.dataTransfer.getData('text/data');
     this.sendAction('selectSkill', data);
     set(this, 'dragClass', 'deactivated');
+  },
+
+  actions: {
+    removeSkill(skill) {
+      this.sendAction('removeSkill', skill);
+    }
   }
 });

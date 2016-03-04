@@ -3,17 +3,20 @@
 <div class="skill-select-area">
   <div layout="row">
     <div class="available-skills" flex="49">
-      {{#each skills as |skill|}}
-        {{#skill-drag-tile content=skill.id}}
-          {{skill-card-image skill}}
-        {{/skill-drag-tile}}
+      {{#each availableSkills as |skill|}}
+        {{skill-drag-tile skill=skill content=skill.id}}
       {{/each}}
     </div>
 
     <div class="selected-skills" flex="49">
-      {{#skill-dropzone selectSkill="selectSkill"}}
+      {{#skill-dropzone selectSkill="selectSkill" removeSkill="removeSkill"}}
         {{#each selectedSkills.skills as |selected|}}
-          {{selected.name}}
+          <div class="mini-skill">
+            <span class="mini-skill-name">{{selected.name}}</span>
+            {{#paper-button icon-button=true action="removeSkill" param=selected}}
+              {{paper-icon "remove-circle-outline"}}
+            {{/paper-button}}
+          </div>
         {{/each}}
       {{/skill-dropzone}}
     </div>
