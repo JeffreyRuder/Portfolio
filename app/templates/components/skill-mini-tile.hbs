@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <td>
+      {{skill-mini-image selected}}
+    </td>
+    <td>
+      <span class="mini-skill-name">{{selected.name}}</span>
+    </td>
+    <td>
+      {{#paper-button icon-button=true action="removeSkill" param=selected}}
+        {{paper-icon "remove-circle-outline"}}
+      {{/paper-button}}      
+    </td>
+  </tr>
+</table>

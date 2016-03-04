@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         return this.get('selectedSkills').add(skill);
       }
     },
-
+    
     removeSkill(skill) {
       return this.get('selectedSkills.skills').removeObject(skill);
     }

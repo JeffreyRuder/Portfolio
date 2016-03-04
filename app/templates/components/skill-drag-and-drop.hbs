@@ -1,7 +1,8 @@
 <h1>What skills does your team need?</h1>
 
 <div class="skill-select-area">
-  <div layout="row">
+
+  <div layout-gt-md="row">
     <div class="available-skills" flex="49">
       {{#each availableSkills as |skill|}}
         {{skill-drag-tile skill=skill content=skill.id}}
@@ -11,12 +12,7 @@
     <div class="selected-skills" flex="49">
       {{#skill-dropzone selectSkill="selectSkill" removeSkill="removeSkill"}}
         {{#each selectedSkills.skills as |selected|}}
-          <div class="mini-skill">
-            <span class="mini-skill-name">{{selected.name}}</span>
-            {{#paper-button icon-button=true action="removeSkill" param=selected}}
-              {{paper-icon "remove-circle-outline"}}
-            {{/paper-button}}
-          </div>
+          {{skill-mini-tile selected=selected removeSkill="removeSkill" class="mini-skill"}}
         {{/each}}
       {{/skill-dropzone}}
     </div>

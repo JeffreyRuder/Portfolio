@@ -1,0 +1,8 @@
+{{#if selectedSkills.skills}}
+  <h1>Projects demonstrating {{skill-selection-pluralizer 'this' length}} {{skill-selection-pluralizer 'skill' length}}</h1>
+
+{{/if}}
+
+{{#each selectedSkills.skills as |skill|}}
+  {{skill.name}} SELECTED!
+{{/each}}

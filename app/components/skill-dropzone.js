@@ -3,6 +3,8 @@ import Ember from 'ember';
 var { set } = Ember;
 
 export default Ember.Component.extend({
+  selectedSkills: Ember.inject.service(),
+
   classNames: ['draggableDropzone'],
   classNameBindings: ['dragClass'],
   dragclass: 'deactivated',

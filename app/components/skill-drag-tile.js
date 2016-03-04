@@ -7,7 +7,7 @@ export default Ember.Component.extend({
 
   classNames: ['draggableItem'],
   attributeBindings: ['draggable'],
-  draggable: true,
+  draggable: 'true',
 
   dragStart(event) {
     return event.dataTransfer.setData('text/data', get(this, 'content'));

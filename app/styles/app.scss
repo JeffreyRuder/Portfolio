@@ -12,12 +12,8 @@ $default-margin : 20px;
   margin: 0;
 }
 
-.selected-skills {
-  height: 100%;
-}
-
 .mini-skill {
-  padding: $default-margin /1.25;
+  padding: $default-margin /2 $default-margin /2;
   margin: $default-margin /4;
   display: inline-flex;
 
@@ -28,8 +24,12 @@ $default-margin : 20px;
   box-shadow: $whiteframe-shadow-z1;
   position: relative;
 
+  .skill-mini-image {
+    height: 50px;
+    width: 50px;
+  }
+
   .mini-skill-name {
-    font-size: 1.25rem;
     margin: $default-margin /2;
     color: $foreground;
   }
@@ -58,22 +58,33 @@ $default-margin : 20px;
    }
 }
 
-.draggableItem[draggable=false] {
-   background-color: map-get($color-blue-grey, "50");
+.selected-tiles {
+  min-width: 49%;
 }
 
 .draggableDropzone {
-   display: block;
-   border: 3px dashed map-get($color-blue-grey, "500");
-   background-color: map-get($color-blue-grey, "50");
-   margin: 0 $default-margin * 2;
-   padding: $default-margin / 2;
-   width: 80%;
-   min-height: 150px;
-   &.activated {
-     border-color: map-get($color-deep-orange, "500");
-   }
-   &.deactivated {
-     border-color: map-get($color-blue-grey, "500");
-   }
+  display: block;
+  min-height: 350px;
+  border: 3px dashed map-get($color-blue-grey, "500");
+  background-color: map-get($color-blue-grey, "50");
+  margin: $default-margin * 2;
+  padding: $default-margin / 2;
+  &.activated {
+    border-color: map-get($color-deep-orange, "500");
+  }
+  &.deactivated {
+    border-color: map-get($color-blue-grey, "500");
+  }
+
+  .dropzone-instructions {
+    text-align: center;
+    color: $foreground;
+    margin-top: $default-margin
+  }
+}
+
+@media (min-width: $layout-breakpoint-md) {
+  .selected-tiles {
+    min-height: 95%;
+  }
 }
