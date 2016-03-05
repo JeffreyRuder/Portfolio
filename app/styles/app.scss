@@ -6,6 +6,11 @@ $default-margin : 20px;
   max-width: 85%;
 }
 
+a {
+  text-decoration: none;
+  color: $base-color;
+}
+
 .skill-card-image {
   height: 150px;
   width: 150px;
@@ -31,7 +36,7 @@ $default-margin : 20px;
 
   .mini-skill-name {
     margin: $default-margin /2;
-    color: $foreground;
+    color: $base-color;
   }
 }
 
@@ -78,9 +83,18 @@ $default-margin : 20px;
 
   .dropzone-instructions {
     text-align: center;
-    color: $foreground;
-    margin-top: $default-margin
+    color: $base-color;
+    margin-top: $default-margin;
   }
+}
+
+.project-skill-name {
+  margin-right: $default-margin;
+}
+
+.project-image {
+  height: 400px;
+  width: 100%;
 }
 
 @media (min-width: $layout-breakpoint-md) {
