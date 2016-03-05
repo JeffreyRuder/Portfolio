@@ -72,7 +72,7 @@ a {
   min-height: 350px;
   border: 3px dashed map-get($color-blue-grey, "500");
   background-color: map-get($color-blue-grey, "50");
-  margin: $default-margin * 2;
+  margin: $default-margin $default-margin /4;
   padding: $default-margin / 2;
   &.activated {
     border-color: map-get($color-deep-orange, "500");
@@ -90,9 +90,9 @@ a {
 
 .project-card {
   margin: $default-margin *2 0;
-  background: map-get($color-grey, "100");
+  background: map-get($color-cyan, "100");
   max-width: 990px;
-  box-shadow: $whiteframe-shadow-z4;
+  box-shadow: $whiteframe-shadow-z5;
 }
 
 .project-skill-name {
