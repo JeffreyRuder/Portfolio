@@ -88,6 +88,13 @@ a {
   }
 }
 
+.project-card {
+  margin: $default-margin *2 0;
+  background: map-get($color-grey, "100");
+  max-width: 990px;
+  box-shadow: $whiteframe-shadow-z4;
+}
+
 .project-skill-name {
   margin-right: $default-margin;
 }
