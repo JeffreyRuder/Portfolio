@@ -1,7 +1,10 @@
-# Portfolio
+# Dynamic Portfolio
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a template for a personal portfolio site. Users use the draggable tiles to select skills important for their teams, and the portfolio displays a list of projects relevant to those skills.
+
+This project demonstrates Ember helpers, services, and computed properties.
+
+It also demonstrates using `event.dataTransfer` to move data between Ember components on drag actions.
 
 ## Prerequisites
 
@@ -15,7 +18,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/JeffreyRuder/Portfolio.git`
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -24,10 +27,6 @@ You will need the following things properly installed on your computer.
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
@@ -39,10 +38,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
@@ -50,4 +45,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
