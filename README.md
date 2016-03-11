@@ -1,6 +1,6 @@
 # Dynamic Portfolio
 
-This is a template for a personal portfolio site. Users use the draggable tiles to select skills important for their teams, and the portfolio displays a list of projects relevant to those skills.
+This is a personal portfolio site. Users use the draggable tiles to select skills important for their teams, and the portfolio displays a list of projects relevant to those skills.
 
 This project demonstrates Ember helpers, services, and computed properties.
 
