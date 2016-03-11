@@ -4,8 +4,29 @@
 
   <div layout-gt-md="row">
     <div class="available-skills" flex="49">
+      <h3>Languages</h3>
       {{#each availableSkills as |skill|}}
-        {{skill-drag-tile skill=skill content=skill.id}}
+        {{#if skill.isLanguage}}
+          {{skill-drag-tile skill=skill content=skill.id}}
+        {{/if}}
+      {{/each}}
+      <h3>Frameworks</h3>
+      {{#each availableSkills as |skill|}}
+        {{#if skill.isFramework}}
+          {{skill-drag-tile skill=skill content=skill.id}}
+        {{/if}}
+      {{/each}}
+      <h3>Databases, Build Tools, &amp; Testing</h3>
+      {{#each availableSkills as |skill|}}
+        {{#if skill.isDatabase}}
+          {{skill-drag-tile skill=skill content=skill.id}}
+        {{/if}}
+        {{#if skill.isBuildTool}}
+          {{skill-drag-tile skill=skill content=skill.id}}
+        {{/if}}
+        {{#if skill.isTesting}}
+          {{skill-drag-tile skill=skill content=skill.id}}
+        {{/if}}
       {{/each}}
     </div>
 

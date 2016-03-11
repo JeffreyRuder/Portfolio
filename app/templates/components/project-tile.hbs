@@ -10,9 +10,9 @@
         {{#each project.skills as |skill|}}
           <span class="project-skill-name">{{skill.name}}</span>
         {{/each}}
-        <a href={{project.github_url}} target="_blank">{{#paper-button}}GitHub{{/paper-button}}</a>
+        <a href={{project.github_url}} target="_blank">{{#paper-button raised=true primary=true}}GitHub{{/paper-button}}</a>
         {{#if project.deployment_url}}
-          <a href={{project.deployment_url}} target="_blank">{{#paper-button}}Demo{{/paper-button}}</a>
+          <a href={{project.deployment_url}} target="_blank">{{#paper-button raised=true accent=true}}Demo{{/paper-button}}</a>
         {{/if}}
     </div>
     {{/paper-card-content}}
