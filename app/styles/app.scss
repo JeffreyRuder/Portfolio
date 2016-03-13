@@ -1,5 +1,8 @@
 $default-margin : 20px;
 
+$primary: "blue";
+$accent: "orange";
+
 @import 'ember-paper';
 
 .main-content {
@@ -59,7 +62,7 @@ a {
    -khtml-user-drag: element;
    cursor: move;
    &:hover {
-     background-color: map-get($color-blue-grey, "50");
+     background-color: map-get($color-blue, "50");
    }
 }
 
@@ -70,15 +73,15 @@ a {
 .draggableDropzone {
   display: block;
   min-height: 450px;
-  border: 3px dashed map-get($color-blue-grey, "500");
-  background-color: map-get($color-blue-grey, "50");
+  border: 3px dashed map-get($color-blue, "500");
+  background-color: map-get($color-blue, "50");
   margin: $default-margin * 2 $default-margin /4;
   padding: $default-margin / 2;
   &.activated {
-    border-color: map-get($color-deep-orange, "500");
+    border-color: map-get($color-orange, "500");
   }
   &.deactivated {
-    border-color: map-get($color-blue-grey, "500");
+    border-color: map-get($color-blue, "500");
   }
 
   .dropzone-instructions {

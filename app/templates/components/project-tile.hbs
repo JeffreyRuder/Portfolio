@@ -1,4 +1,4 @@
-{{#if skillsInCommon}}
+{{#if (or skillsInCommon showAllProjects)}}
   {{#paper-card class="project-card"}}
     <a href={{project.github_url}} target="_blank"><div class="project-image" style={{cleanCSS project.image}}></div></a>
     {{#paper-card-content}}

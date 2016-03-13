@@ -1,7 +1,10 @@
 {{#if selectedSkills.skills}}
-  <h1>Projects demonstrating {{skill-selection-pluralizer 'this' length}} {{skill-selection-pluralizer 'skill' length}}</h1>
+  <h1 id="projects_heading">Projects demonstrating {{skill-selection-pluralizer 'this' length}} {{skill-selection-pluralizer 'skill' length}}</h1>
+  {{else}}
+    <h1 id="projects_heading">Select skills above to see projects relevant to your team's needs, or view all projects.</h1>
+    {{#paper-checkbox checked=showAllProjects}}View all projects?{{/paper-checkbox}}
 {{/if}}
 
 {{#each model.projects as |project|}}
-  {{project-tile project=project}}
+  {{project-tile project=project showAllProjects=showAllProjects}}
 {{/each}}
