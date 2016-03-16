@@ -11,8 +11,9 @@
 
     {{#paper-content}}
       {{#paper-list}}
-        {{#paper-item action="transitionTo" param="index"}}Introduction{{/paper-item}}
+        {{#paper-item}}{{#scroll-to href="#about_heading"}}About{{/scroll-to}}{{/paper-item}}
         {{#paper-item}}{{#scroll-to href="#projects_heading"}}Projects{{/scroll-to}}{{/paper-item}}
+        {{#paper-item}}{{#scroll-to href="#contact_heading"}}Contact{{/scroll-to}}{{/paper-item}}
       {{/paper-list}}
     {{/paper-content}}
   {{/paper-sidenav}}

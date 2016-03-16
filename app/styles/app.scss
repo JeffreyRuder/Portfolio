@@ -15,8 +15,8 @@ a {
 }
 
 .skill-card-image {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   margin: 0;
 }
 
@@ -44,8 +44,8 @@ a {
 }
 
 .draggableItem {
-   height: 150px;
-   width: 150px;
+   height: 100px;
+   width: 100px;
    min-width: $default-margin;
    min-height: $default-margin;
    padding: $default-margin /2;
@@ -73,10 +73,10 @@ a {
 .draggableDropzone {
   display: block;
   min-height: 450px;
-  border: 3px dashed map-get($color-blue, "500");
   background-color: map-get($color-blue, "50");
-  margin: $default-margin * 2 $default-margin /4;
+  margin: $default-margin $default-margin /4;
   padding: $default-margin / 2;
+  box-shadow: $whiteframe-shadow-z4;
   &.activated {
     border-color: map-get($color-orange, "500");
   }
@@ -104,6 +104,10 @@ a {
   height: 500px;
   margin: $default-margin;
   box-shadow: $whiteframe-shadow-z4;
+}
+
+.contact_list_heading {
+  margin: 0 !important;
 }
 
 @media (min-width: $layout-breakpoint-md) {
