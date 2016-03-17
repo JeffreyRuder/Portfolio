@@ -1,21 +1,32 @@
 <h1>What skills does your team need?</h1>
 
 <div class="skill-select-area">
+  {{#skill-dropzone selectSkill="selectSkill" removeSkill="removeSkill"}}
+    {{#each selectedSkills.skills as |selected|}}
+      {{skill-mini-tile selected=selected removeSkill="removeSkill" class="mini-skill"}}
+    {{/each}}
+  {{/skill-dropzone}}
 
   <div layout-gt-md="row">
-    <div class="available-skills" flex="49">
+    <div flex="33">
       <h3>Languages</h3>
       {{#each availableSkills as |skill|}}
         {{#if skill.isLanguage}}
           {{skill-drag-tile skill=skill content=skill.id}}
         {{/if}}
       {{/each}}
+    </div>
+
+    <div flex="33">
       <h3>Frameworks</h3>
       {{#each availableSkills as |skill|}}
         {{#if skill.isFramework}}
           {{skill-drag-tile skill=skill content=skill.id}}
         {{/if}}
       {{/each}}
+    </div>
+
+    <div flex="33">
       <h3>Databases, Build Tools, &amp; Testing</h3>
       {{#each availableSkills as |skill|}}
         {{#if skill.isDatabase}}
@@ -30,12 +41,10 @@
       {{/each}}
     </div>
 
-    <div class="selected-skills" flex="49">
-      {{#skill-dropzone selectSkill="selectSkill" removeSkill="removeSkill"}}
-        {{#each selectedSkills.skills as |selected|}}
-          {{skill-mini-tile selected=selected removeSkill="removeSkill" class="mini-skill"}}
-        {{/each}}
-      {{/skill-dropzone}}
-    </div>
+
   </div>
+
+
+
+
 </div>

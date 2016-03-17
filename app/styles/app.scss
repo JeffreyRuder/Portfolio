@@ -6,7 +6,7 @@ $accent: "orange";
 @import 'ember-paper';
 
 .main-content {
-  max-width: 85%;
+  max-width: 65%;
 }
 
 a {
@@ -72,7 +72,7 @@ a {
 
 .draggableDropzone {
   display: block;
-  min-height: 450px;
+  min-height: 150px;
   background-color: map-get($color-blue, "50");
   margin: $default-margin $default-margin /4;
   padding: $default-margin / 2;
@@ -106,8 +106,12 @@ a {
   box-shadow: $whiteframe-shadow-z4;
 }
 
-.contact_list_heading {
-  margin: 0 !important;
+.contact_icon {
+  margin-right: $default-margin;
+}
+
+.contact_info {
+  max-width: 400px;
 }
 
 @media (min-width: $layout-breakpoint-md) {
