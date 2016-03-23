@@ -110,8 +110,17 @@ a {
   margin-right: $default-margin;
 }
 
-.contact_info {
-  max-width: 400px;
+.contact_list_heading {
+  h3 {
+    margin: 0;
+  }
+  h4 {
+    margin: 0;
+  }
+}
+
+.info_tile {
+  max-width: 425px;
 }
 
 @media (min-width: $layout-breakpoint-md) {
