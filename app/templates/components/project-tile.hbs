@@ -1,15 +1,20 @@
 {{#if (or skillsInCommon showAllProjects)}}
   {{#paper-card class="project-card"}}
-    <a href={{project.github_url}} target="_blank"><div class="project-image" style={{cleanCSS project.image}}></div></a>
+    {{#if project.deployment_url}}
+      <a href={{project.deployment_url}} target="_blank"><div class="project-image" style={{cleanCSS project.image}}></div></a>
+      {{else}}
+      <a href={{project.github_url}} target="_blank"><div class="project-image" style={{cleanCSS project.image}}></div></a>
+    {{/if}}
     {{#paper-card-content}}
       <h2>{{project.name}}</h2>
+      {{#each project.skills as |skill|}}
+        <span class="project-skill-name">{{skill.name}}</span>
+      {{/each}}
       <p>
         {{project.description}}
       </p>
       <div class="md-actions" layout="row" layout-align="end center">
-        {{#each project.skills as |skill|}}
-          <span class="project-skill-name">{{skill.name}}</span>
-        {{/each}}
+
         <a href={{project.github_url}} target="_blank">{{#paper-button raised=true primary=true}}GitHub{{/paper-button}}</a>
         {{#if project.deployment_url}}
           <a href={{project.deployment_url}} target="_blank">{{#paper-button raised=true accent=true}}Demo{{/paper-button}}</a>
