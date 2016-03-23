@@ -6,5 +6,6 @@ export default DS.Model.extend({
   skills: DS.hasMany('skill'),
   github_url: DS.attr(),
   deployment_url: DS.attr(),
-  description: DS.attr()
+  description: DS.attr(),
+  featured: DS.attr()
 });

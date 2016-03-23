@@ -5,6 +5,6 @@
     {{#paper-checkbox checked=showAllProjects}}View all projects?{{/paper-checkbox}}
 {{/if}}
 
-{{#each model.projects as |project|}}
+{{#each sortedProjects as |project|}}
   {{project-tile project=project showAllProjects=showAllProjects}}
 {{/each}}
