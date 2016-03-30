@@ -135,3 +135,9 @@ a {
     min-height: 95%;
   }
 }
+
+@media (max-width: $layout-breakpoint-md) {
+  .main-content {
+    max-width: 100%;
+  }
+}
