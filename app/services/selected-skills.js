@@ -5,5 +5,6 @@ export default Ember.Service.extend({
 
   add(skill) {
     this.get('skills').pushObject(skill);
+    this.notifyPropertyChange("skills");
   }
 });
