@@ -20,6 +20,7 @@ export default Ember.Component.extend({
   },
 
   drop(event) {
+    event.preventDefault();    
     var data = event.dataTransfer.getData('text/data');
     this.sendAction('selectSkill', data);
     set(this, 'dragClass', 'deactivated');
