@@ -10,7 +10,7 @@ export default Ember.Component.extend({
   draggable: 'true',
 
   dragStart(event) {
-    return event.dataTransfer.setData('text/data', get(this, 'content'));
+    return event.dataTransfer.setData('text/plain', get(this, 'content'));
   },
 
 });
